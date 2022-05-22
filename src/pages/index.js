@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
@@ -8,73 +7,69 @@ import * as styles from "../components/index.module.css"
 
 const links = [
   {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
+    text: "Venda o que não quer",
+    url: "#1",
     description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
+      "Venda o que não quer, para que possa dar um novo uso aos produtos que já não usa.",
   },
   {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
+    text: "Promova o seu negócio",
+    url: "#2",
     description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
+      "Quer seja uma pequena ou grande empresa, pode divulgar e promover os seus produtos e serviços para que mais pessoas possam usá-los.",
   },
   {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
+    text: "Facilidade de uso",
+    url: "#3",
     description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
+      "A nossa aplicação mobile é de fácil uso, com uma interface amigável, intuitiva e familiar, garantindo a qualidade da plataforma.",
   },
   {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
+    text: "Alta segurança",
+    url: "#4",
     description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
+      "A nossa aplicação mobile é segura, confiável e de código aberto, garantindo a segurança dos seus dados pessoais e intransmissíveis.",
   },
-]
-
-const samplePageLinks = [
   {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
+    text: "Uso de tecnologia de ponta",
+    url: "#5",
     description:
-      "A simple example of linking to another page within a Gatsby site",
+      "Utilizamos tecnologias de ponta, como React Native, Expo e Firebase para garantir a qualidade do nosso serviço.",
   },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
+  {
+    text: "Rápido suporte",
+    url: "#6",
+    description:
+      "Caso encontre algum problema ou dúvida, não hesite em entrar em contato connosco, estamos sempre prontos para ajudar.",
+  }
 ]
 
 const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
+  { text: "Termos e Condições", url: "#" },
   {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
+    text: "Política de Privacidade",
+    url: "#",
   },
   {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
+    text: "GitHub",
+    url: "https://github.com/selyt-dev/",
   },
   {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
+    text: "Instagram",
+    url: "https://instagram.com/selyt.pt/",
   },
   {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
+    text: "Suporte",
+    url: "mailto:support@selyt.pt",
   },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
 ]
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <div className={styles.textCenter}>
       <StaticImage
-        src="../images/example.png"
+        src="../images/selyt-logo.png"
         loading="eager"
         width={64}
         quality={95}
@@ -83,36 +78,49 @@ const IndexPage = () => (
         style={{ marginBottom: `var(--space-3)` }}
       />
       <h1>
-        Welcome to <b>Gatsby!</b>
+        Selyt
       </h1>
       <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
+        If you don't want it, just selyt.
       </p>
     </div>
     <ul className={styles.list}>
       {links.map(link => (
         <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
+          <b>{link.text}</b>
           <p className={styles.listItemDescription}>{link.description}</p>
         </li>
       ))}
     </ul>
+
+    <hr></hr>
+
+    <div className={styles.textCenter}>
+      <h2>
+        Transfira já a nossa aplicação para Android!
+      </h2>
+      <p className={styles.intro}>
+        Faça o download da nossa aplicação e comece a dar um novo uso aos seus produtos.
+      </p>
+      <a
+          href="https://play.google.com/store/apps/details?id=pt.selyt.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: `none`, color: `white` }}
+        >
+      <button className={styles.button}>
+        
+          Transferir
+      </button>
+      </a>
+    </div>
+
+    <br></br>
+    <hr></hr>
+
     {moreLinks.map((link, i) => (
       <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
+        <a href={`${link.url}`}>{link.text}</a>
         {i !== moreLinks.length - 1 && <> · </>}
       </React.Fragment>
     ))}
