@@ -103,7 +103,7 @@ const IndexPage = () => (
         Faça o download da nossa aplicação e comece a dar um novo uso aos seus produtos.
       </p>
       <a
-          href="https://play.google.com/store/apps/details?id=pt.selyt.app"
+          href="https://expo.dev/artifacts/eas/hB1x6Ed622ZKU5rcHzzJvs.apk"
           target="_blank"
           rel="noopener noreferrer"
           style={{ textDecoration: `none`, color: `white` }}
