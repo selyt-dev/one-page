@@ -45,10 +45,10 @@ const links = [
 ]
 
 const moreLinks = [
-  { text: "Termos e Condições", url: "#" },
+  { text: "Termos e Condições", url: "/terms-and-conditions" },
   {
     text: "Política de Privacidade",
-    url: "#",
+    url: "/privacy-policy",
   },
   {
     text: "GitHub",
